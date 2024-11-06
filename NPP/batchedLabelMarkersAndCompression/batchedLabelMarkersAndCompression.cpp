@@ -257,6 +257,17 @@ int main(int argc, const char *argv[])
         pUFLabelHost[j] = 0;
     }
 
+    pUFBatchSrcImageListDev = 0;
+    pUFBatchSrcDstImageListDev = 0;
+    pUFBatchSrcImageListHost = 0;
+
+    for ( image_labelmarker_params_t : range-expression) {
+        std::cout << "Number of batch: " << params.numofbatch << std::endl;
+        InputFile0 = Path + std::string("lena_512x512_8u.raw");
+        InputFile1 = Path + std::string("CT_skull_512x512_8u.raw");
+        InputFile2 = Path + std::string("PCB_METAL_509x335_8u.raw");
+    }
+
     nppStreamCtx.hStream = 0; // The NULL stream by default, set this to whatever your stream ID is if not the NULL stream.
 
     cudaError = cudaGetDevice(&nppStreamCtx.nCudaDeviceId);
