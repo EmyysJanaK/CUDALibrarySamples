@@ -97,3 +97,12 @@ set(CUBLAS_EXAMPLES_BINARY_INSTALL_DIR "cublas_examples/bin")
 IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   SET(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR} CACHE PATH "" FORCE)
 ENDIF()
+
+install(TARGETS cublas_examples
+        RUNTIME DESTINATION ${CUBLAS_EXAMPLES_BINARY_INSTALL_DIR}
+        COMPONENT examples)
+
+# ##########################################
+# Summary
+# ##########################################
+
