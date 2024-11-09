@@ -310,6 +310,11 @@ int main(int argc, const char *argv[])
     nppStreamCtx.nMaxThreadsPerMultiProcessor = oDeviceProperties.maxThreadsPerMultiProcessor;
     nppStreamCtx.nMaxThreadsPerBlock = oDeviceProperties.maxThreadsPerBlock;
     nppStreamCtx.nSharedMemPerBlock = oDeviceProperties.sharedMemPerBlock;
+    nppStreamCtx.nMaxGridSizeX = oDeviceProperties.maxGridSize[0];
+    nppStreamCtx.nMaxGridSizeY = oDeviceProperties.maxGridSize[1];
+
+
+    image_labelmarker_params_t params;
 
     NppiSize oSizeROI[NUMBER_OF_IMAGES];
 
